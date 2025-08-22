@@ -1,0 +1,184 @@
+@use 'core/reset';
+@use 'components/code';
+@use 'components/links';
+@use 'layout/page';
+@use 'layout/header';
+@use 'layout/footer';
+@use 'pages/index';
+
+body {
+    background-color: white;
+}
+
+.userList {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5rem;
+    margin-bottom: 3rem;
+    margin-inline: 5rem;
+}
+
+.user_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    width: 20rem;
+    font-family: "Quicksand", sans-serif;
+    color: #4B4B4B;
+    padding-block: 2rem;
+    background-color: lightgray;  
+}
+
+.user_img {
+    border-radius: 1rem;
+}
+
+.user_name {
+    color: #2E2E2E;
+}
+
+.user_country {
+    color: #555555;
+}
+
+.user_username {
+    color: #FFFFFF;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.button_icon {
+    width: 3rem;
+}
+
+//boton con imagen
+ .button {
+    background: none;
+    border: none;
+    margin-bottom: 1rem;
+    cursor: pointer;   
+} 
+
+.button:hover {
+    transform: scale(1.2);
+    transition: transform 0.2s ease;
+    filter: brightness(1.5);
+    color: black;
+}
+
+.dataButton {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1rem;
+    //font-weight: bold;
+    width: 10rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+}
+
+.dataButton_container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+.friends_title {
+    font-family: "Quicksand", sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    background-color: #4B4B4B;
+    margin-bottom: 3rem;
+}
+
+.friendsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center; 
+    margin-inline: 20rem;
+}
+
+
+
+.user_container_friend {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    width: 15.5rem;
+    height: 15.5rem;
+    font-family: "Quicksand", sans-serif;
+    color: #4B4B4B;
+    padding-top: 1.5rem;
+    background-color: white;
+    border: 3px solid #4B4B4B;
+}
+
+.user_img_friend {
+    width: 5rem;
+}
+
+.user_name_friend {
+    font-size: 1.2rem;
+    color: #2E2E2E;
+}
+
+.user_country_friend {
+    font-size: 0.9rem;
+    color: #555555;
+}
+
+.user_username_friend {
+    font-size: 0.9rem;
+    color: #555555;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+
+}
+
+ .buttonFriend {
+    background: none;
+    border: none;
+    margin-bottom: 1rem;  
+} 
+
+
+
+
+
+
+
+
+
+//ESTAS DOS CLASES SON POR SI QUIERO CAMBIAR LA CLASE AL BOTÓN EN VEZ DE QUE CAMBIE LA IMAGEN DEL CORAZÓN
+/* .button {
+    width: 5rem;
+    height: 2rem;
+    margin-bottom: 1.8rem;
+    cursor: pointer;
+    background-color: white;
+    color: darkgray;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;    
+}  */
+
+/* .friend {
+    width: 5rem;
+    height: 2rem;
+    margin-bottom: 1.8rem;
+    cursor: pointer;
+    background-color: lightcoral;
+    color: white;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+}  */
+
