@@ -1,54 +1,62 @@
-![Adalab](https://beta.adalab.es/resources/images/adalab-logo-155x61-bg-white.png)
+# HeyFriend 💛  
 
-# Adalab web starter kit
 
-Ahoy! Este es nuestro Starter Kit creado en **node y vite**. ¿Y qué es un Starter kit? Pues es una **plantilla de proyecto con funcionalidades preinstaladas y preconfiguradas**.
+**HeyFriend** es una aplicación web sencilla que te permite marcar usuarios como amigos y guardarlos en una lista personalizada. Cada vez que recargas la página, se generan 10 nuevos usuarios aleatorios, pero puedes guardar y recuperar tus amigos en cualquier momento.
 
-Este Kit incluye un motor de plantillas HTML, el preprocesador SASS y un servidor local y muchas cosas más. El Kit nos ayuda a trabajar más cómodamente, nos automatiza tareas.
+---
 
-En el Kit hay 3 tipos de ficheros y carpetas:
+## 🌐 Demo en vivo
 
-- Los ficheros que están sueltos en la raíz del repositorio, como vite.config.js, package.json... Son la configuración del proyecto y no necesitamos modificarlos (excepto este README.md, para describir tu proyecto).
-- La carpeta `src/`: son los ficheros de nuestra página web, como HTML, CSS, JS...
-- La carpeta `public/`, que tiene fichero estáticos como imágenes, fuentes, favicon, librerías de JavaScript antiguas (jQuery, ...)
-- Y la carpeta `docs/`, que es generada automáticamente cuando arrancamos el proyecto. El Kit lee los ficheros que hay dentro de `src/` y `public/`, los procesa y los genera dentro de `public/` y `docs/`.
+Puedes probar la aplicación directamente en GitHub Pages:  
+[👉 Abrir HeyFriend](https://tu-usuario.github.io/heyfriend)  
+*(Reemplaza con tu enlace real de GitHub Pages)*
 
-## Guía de inicio rápido
+---
 
-> **NOTA:** Necesitas tener instalado [Node JS](https://nodejs.org/) con una versión superior a la 14 para trabajar con este Starter Kit:
+## 🚀 Funcionalidades
 
-### Pasos a seguir cada vez que queremos arrancar un proyecto desde cero:
+- 🔄 **Usuarios aleatorios**: se obtienen 10 nuevos usuarios desde [randomuser.me](https://randomuser.me/api/?results=10) cada vez que se inicia la aplicación o se recarga la página.
+- ❤️ **Marcar como amigo**: haz clic en el ícono de corazón para añadir un usuario a tu lista de amigos. El corazón se vuelve rojo.
+- 💾 **Guardar amigos**: guarda tus amigos en `localStorage` para no perderlos al recargar la página.
+- ♻️ **Recuperar amigos**: recupera tus amigos guardados desde `localStorage` y vuelve a mostrarlos en la lista.
+- 🗑️ **Eliminar amigos**: borra la lista de amigos y elimina los datos guardados en `localStorage`.
 
-1. **Crea tu propio repositorio.**
-1. Descarga este **Starter kit desde GitHub**.
-   - No recomendamos que clones este repo ya que no podrás añadir commits.
-1. **Copia todos los ficheros** de este Starter kit en la carpeta raíz de tu repositorio.
-   - Recuerda que debes copiar **también los ficheros ocultos** que comienzan por un punto.
-   - Si has decidido clonar este repo, no debes copiar la carpeta `.git`. Si lo haces estarás machacando tu propio repositorio.
-1. **Abre una terminal** en la carpeta raíz de tu repositorio.
-1. **Instala las dependencias** locales ejecutando en la terminal el comando:
+---
 
-```bash
-npm install
-```
+## 🛠️ Tecnologías utilizadas
 
-### Pasos para arrancar el proyecto:
+- **HTML**
+- **CSS**
+- **JavaScript**  
+Utiliza `fetch()` para obtener datos y `localStorage` para guardar la información.
 
-Una vez hemos instalado las dependencias, vamos a arrancar el proyecto. **El proyecto hay que arrancarlo cada vez que te pongas a programar.** Para ello ejecuta el comando:
+---
 
-```bash
-npm run dev
-```
+## 📦 Instalación
 
-Este comando:
+#### 1. Clona el repo
 
-- **Abre una ventana de Chrome y muestra tu página web**, al igual que hace el plugin de VS Code Live Server (Go live).
-- También **observa** todos los ficheros que hay dentro de la carpeta `src/`, para que cada vez que modifiques un fichero **refresca tu página en Chrome**.
-- También **procesa los ficheros** HTML, SASS / CSS y JS. Por ejemplo:
-   - Convierte los ficheros SASS en CSS.
-   - Combina los diferentes ficheros de HTML y los agrupa en uno o varios ficheros HTML.
+`git clone https://github.com/tu-usuario/heyfriend.git`
 
-Después de ejecutar `npm run dev` ya puedes empezar a editar todos los ficheros que están dentro de la carpeta `src/` y programar cómodamente.
+#### 2. Instala las dependencias
+
+`npm install`
+
+#### 3. Despliega la app 
+
+`npm run dev`
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Pasos para publicar el proyecto en GitHub Pages:
 
