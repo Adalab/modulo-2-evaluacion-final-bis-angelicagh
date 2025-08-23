@@ -138,7 +138,15 @@ const handleClickRecover = () => {
 } 
 
 const handleClickRemove = () => {
-     localStorage.clear;
+     localStorage.clear();
+      friends = [];   
+      //poner todos los corazones blancos
+      const allHeartImages = document.querySelectorAll(".js_heart");
+    allHeartImages.forEach(img => {
+    img.src = "/images/blanco.png";
+  });             
+  renderFriends(); 
+       
 }
 
 
