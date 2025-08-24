@@ -2,19 +2,44 @@ header {
   font-family: "Gloria Hallelujah", cursive;
   font-size: 3rem;
   color: #2E2E2E;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-top: 2vw;
+
+ @media all and (max-width: 480px) {
+    font-size: 1.2rem;
+    
+  }
+
+  @media all and (min-width: 481px) and (max-width: 768px) {
+    font-size: 2rem;
+  } 
 }
 
 .header_container {
   display: flex;
   justify-content: center;
+
+   @media all and (max-width: 480px) {
+    flex-direction: column;
+    align-items: center;
+
+  
+  }
 }
 
 .header_img {
-  height: 10rem;
+  height: 9rem;
+
+ @media all and (max-width: 480px) {
   
+    height: 6rem;
+  }
+
+   @media all and (min-width: 481px) and (max-width: 768px) {
+    height: 12vh;
+  } 
 }
+  
+
 
 .slogan {
   display: flex;
@@ -22,7 +47,15 @@ header {
   font-size: 2rem;
   font-weight: bold;
   font-family: "Amatic SC", sans-serif;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5vw;
+
+ @media all and (max-width: 480px) {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+
+  }
+
+
   
 }
 

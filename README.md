@@ -23,12 +23,16 @@ Puedes probar la aplicación directamente en GitHub Pages:
 
 ---
 
+## 📱 Diseño responsive
+**HeyFriend** está diseñada para adaptarse a distintos tamaños de pantalla. Ya sea que lo uses en móvil, tablet o escritorio, la interfaz se ajusta automáticamente para ofrecer una experiencia fluida y accesible. Esto se logra mediante media queries.
+
 ## 🛠️ Tecnologías utilizadas
 
 - **HTML**
-- **CSS**
+- **SCSS**
 - **JavaScript**  
-Utiliza `fetch()` para obtener datos y `localStorage` para guardar la información.
+- **Vite**
+La aplicación utiliza `fetch()` para obtener datos y `localStorage` para guardar y recuperar la información.
 
 ---
 

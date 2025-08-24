@@ -15,9 +15,15 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 5rem;
-    margin-bottom: 3rem;
-    margin-inline: 5rem;
+    gap: 3rem;
+    margin-bottom: 2.5rem;
+    margin-inline: 3rem;
+
+
+       @media all and (min-width: 481px) and (max-width: 768px) {
+            margin-inline: 2rem;
+      
+    }   
 }
 
 .user_container {
@@ -28,20 +34,29 @@ body {
     width: 20rem;
     font-family: "Quicksand", sans-serif;
     color: #4B4B4B;
-    padding-block: 2rem;
+    padding-block: 1.5rem;
     background-color: lightgray;  
+
+  
+
+      
 }
 
 .user_img {
     border-radius: 1rem;
+
 }
 
 .user_name {
     color: #2E2E2E;
+
+   
 }
 
 .user_country {
     color: #555555;
+
+    
 }
 
 .user_username {
@@ -50,14 +65,16 @@ body {
 }
 
 .button_icon {
-    width: 3rem;
+    width: 3.5rem;
+
+   
 }
 
 //boton con imagen
  .button {
     background: none;
     border: none;
-    margin-bottom: 1rem;
+    margin-bottom: 0.7rem;
     cursor: pointer;   
 }  
 
@@ -73,9 +90,16 @@ body {
     background-color: white;
     color: #2E2E2E;
     width: 10rem;
-    height: 2rem;
+    height: 2.5rem;
     border-radius: 0.5rem;
     cursor: pointer;
+
+   @media all and (max-width: 480px) {
+        width: 40vw;
+        height: 5vh; 
+    }
+
+    
 }
 
 .dataButton:hover {   
@@ -85,9 +109,17 @@ body {
 
 .dataButton_container {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     justify-content: center;
     padding-bottom: 2rem;
+
+@media all and (max-width: 480px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 2vw;
+      }
+
+      
 }
 
 .friends_title {
@@ -97,8 +129,8 @@ body {
     color: white;
     text-align: center;
     background-color: #4B4B4B;
-    margin-bottom: 3rem;
-    padding-block: 0.3rem;
+    margin-bottom: 2.5rem;
+    padding-block: 0.5rem;
 }
 
 .friendsList {
@@ -106,7 +138,27 @@ body {
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center; 
-    margin-inline: 20rem;
+    margin-inline: 7rem;
+
+  @media all and (max-width: 480px) {
+        flex-direction: column;
+        align-items: center;
+        margin-inline: 1rem;
+        gap: 2rem;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+
+    @media all and (min-width: 481px) and (max-width: 768px) {
+    
+        gap: 3rem;
+        margin-bottom: 2.5rem;
+        margin-inline: 3rem;
+        
+    
+    }  
+
+    
    
 }
 
@@ -117,31 +169,73 @@ body {
     flex-direction: column;
     align-items: center;
     border-radius: 1rem;
-    width: 15.5rem;
-    height: 15.5rem;
+    width: 17rem;
+    height: 17rem;
     font-family: "Quicksand", sans-serif;
     color: #4B4B4B;
     padding-top: 1.5rem;
     background-color: white;
     border: 3px solid #4B4B4B;
+
+ @media all and (max-width: 480px) {
+    flex-direction: column;
+    border-radius: 1rem;
+    padding-block: 1.5rem;
+    width: 20rem;
+    height: 20rem;
+    
+        
+    } 
+
+     @media all and (min-width: 481px) and (max-width: 768px) {
+        width: 20rem;
+        height: 20rem;
+        
+
+    } 
+
+
 }
 
 .user_img_friend {
-    width: 5rem;
+    width: 6rem;
+    border-radius: 1rem;
+
+     @media all and (max-width: 480px) {
+        width: 8rem;
+
+     }
+
+     @media all and (min-width: 481px) and (max-width: 768px) {
+        width: 8rem;
+
+     }
+
+  
 }
 
 .user_name_friend {
     font-size: 1.2rem;
     color: #2E2E2E;
+
+    @media all and (max-width: 480px) {
+        font-size: 1.5rem;
+    }
+
+    @media all and (min-width: 481px) and (max-width: 768px) {
+        font-size: 1.5rem;
+    }
+
+   
 }
 
 .user_country_friend {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #555555;
 }
 
 .user_username_friend {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #555555;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
 
@@ -150,14 +244,8 @@ body {
  .buttonFriend {
     background: none;
     border: none;
-    margin-bottom: 1rem;  
+    margin-bottom: 0.6vw;  
 } 
-
-
-
-
-
-
 
 
 
