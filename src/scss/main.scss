@@ -1,10 +1,7 @@
 @use 'core/reset';
-@use 'components/code';
-@use 'components/links';
-@use 'layout/page';
 @use 'layout/header';
 @use 'layout/footer';
-@use 'pages/index';
+
 
 body {
     background-color: white;
@@ -16,13 +13,11 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 3rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.8rem;
     margin-inline: 3rem;
 
-
        @media all and (min-width: 481px) and (max-width: 768px) {
-            margin-inline: 2rem;
-      
+            margin-inline: 2rem;  
     }   
 }
 
@@ -35,54 +30,25 @@ body {
     font-family: "Quicksand", sans-serif;
     color: #4B4B4B;
     padding-block: 1.5rem;
-    background-color: lightgray;  
-
-  
-
-      
+    background-color: lightgray;        
 }
 
 .user_img {
     border-radius: 1rem;
-
 }
 
 .user_name {
-    color: #2E2E2E;
-
-   
+    color: #2E2E2E; 
 }
 
 .user_country {
-    color: #555555;
-
-    
+    color: #555555; 
 }
 
 .user_username {
     color: #FFFFFF;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
 }
-
-.button_icon {
-    width: 3.5rem;
-
-   
-}
-
-//boton con imagen
- .button {
-    background: none;
-    border: none;
-    margin-bottom: 0.7rem;
-    cursor: pointer;   
-}  
-
-.button:hover {
-    transform: scale(1.2);
-    transition: transform 0.2s ease;
-    filter: brightness(1.5);
-} 
 
 .dataButton {
     font-family: "Quicksand", sans-serif;
@@ -97,9 +63,7 @@ body {
    @media all and (max-width: 480px) {
         width: 40vw;
         height: 5vh; 
-    }
-
-    
+    } 
 }
 
 .dataButton:hover {   
@@ -117,162 +81,20 @@ body {
         flex-direction: column;
         align-items: center;
         gap: 2vw;
-      }
-
-      
+      }   
 }
 
-.friends_title {
-    font-family: "Quicksand", sans-serif;
-    font-size: 2rem;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    background-color: #4B4B4B;
-    margin-bottom: 2.5rem;
-    padding-block: 0.5rem;
-}
-
-.friendsList {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center; 
-    margin-inline: 7rem;
-
-  @media all and (max-width: 480px) {
-        flex-direction: column;
-        align-items: center;
-        margin-inline: 1rem;
-        gap: 2rem;
-        margin-bottom: 2rem;
-        margin-top: 2rem;
-    }
-
-    @media all and (min-width: 481px) and (max-width: 768px) {
-    
-        gap: 3rem;
-        margin-bottom: 2.5rem;
-        margin-inline: 3rem;
-        
-    
-    }  
-
-    
-   
+.friend {
+    background-color: lightsalmon
 }
 
 
 
-.user_container_friend {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 1rem;
-    width: 17rem;
-    height: 17rem;
-    font-family: "Quicksand", sans-serif;
-    color: #4B4B4B;
-    padding-top: 1.5rem;
-    background-color: white;
-    border: 3px solid #4B4B4B;
-
- @media all and (max-width: 480px) {
-    flex-direction: column;
-    border-radius: 1rem;
-    padding-block: 1.5rem;
-    width: 20rem;
-    height: 20rem;
-    
-        
-    } 
-
-     @media all and (min-width: 481px) and (max-width: 768px) {
-        width: 20rem;
-        height: 20rem;
-        
-
-    } 
-
-
-}
-
-.user_img_friend {
-    width: 6rem;
-    border-radius: 1rem;
-
-     @media all and (max-width: 480px) {
-        width: 8rem;
-
-     }
-
-     @media all and (min-width: 481px) and (max-width: 768px) {
-        width: 8rem;
-
-     }
-
-  
-}
-
-.user_name_friend {
-    font-size: 1.2rem;
-    color: #2E2E2E;
-
-    @media all and (max-width: 480px) {
-        font-size: 1.5rem;
-    }
-
-    @media all and (min-width: 481px) and (max-width: 768px) {
-        font-size: 1.5rem;
-    }
-
-   
-}
-
-.user_country_friend {
-    font-size: 1rem;
-    color: #555555;
-}
-
-.user_username_friend {
-    font-size: 1rem;
-    color: #555555;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
-
-}
-
- .buttonFriend {
-    background: none;
-    border: none;
-    margin-bottom: 0.6vw;  
-} 
 
 
 
-//ESTAS DOS CLASES SON POR SI QUIERO CAMBIAR LA CLASE AL BOTÓN EN VEZ DE QUE CAMBIE LA IMAGEN DEL CORAZÓN
-/* .button {
-    width: 5rem;
-    height: 2rem;
-    margin-bottom: 1.8rem;
-    cursor: pointer;
-    background-color: white;
-    color: darkgray;
-    font-family: "Quicksand", sans-serif;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;    
-}  */
 
-/* .friend {
-    width: 5rem;
-    height: 2rem;
-    margin-bottom: 1.8rem;
-    cursor: pointer;
-    background-color: lightcoral;
-    color: white;
-    font-family: "Quicksand", sans-serif;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
-}  */
+
+
+
 

@@ -101,7 +101,7 @@ console.log('>> Ready :)');
     //nota: si filter o map se encuentran tras un bucleo for no hace falta volver a construir el objeto, sin embargo, si estan fuera, hay que construir el objeto de nuevo
 
     //nota: includes diferencia entre mayusculas y minusculas -> toLowerCase()
-    //const const listCursosIntermedios = cursos.filter ((curso) => curso.nivel.toLowerCase().includes("Intermedio"))
+    //const listCursosIntermedios = cursos.filter ((curso) => curso.nivel.toLowerCase().includes("Intermedio"))
 
 
 //PETICIONES AL SERVIDOR (APIS)
