@@ -7,7 +7,7 @@
 ## 🌐 Demo en vivo
 
 Puedes probar la aplicación directamente en GitHub Pages:  
-[👉 Abrir HeyFriend](https://tu-usuario.github.io/heyfriend)  
+[👉 Abrir HeyFriend](https://beta.adalab.es/modulo-2-evaluacion-final-bis-angelicagh/)  
 
 ---
 
