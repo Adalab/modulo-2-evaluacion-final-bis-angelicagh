@@ -9,11 +9,11 @@ const recoverBtn = document.querySelector(".js_recoverbtn");
 let users = [];//mi array comienza vacío y se rellena con los datos de la API
 
 //función para pintar el listado de usuarios
-const renderList = (ev) => {
+const renderList = () => {
     let html = "";//empezamos con un html vacío, después estructura del html y, una vez tiene toda la info, la pinta (más eficiente)
     for (let item of users) {
 
-        const friendClass = item.isFriend ? "friend" : "";//añadir color tarjeta usuario si es amigo   
+        const friendClass = item.isFriend ? "friend" : "";//cambiar color tarjeta usuario si es amigo   
 
         html += `<li class="user_container js_user ${friendClass}" id="${item.id}">
         <img class="user_img" src=${item.picture} alt="Foto usuario">
@@ -25,7 +25,7 @@ const renderList = (ev) => {
 
     userList.innerHTML = html;
 
-    //cuando los usuarios están pintados, es cuando hay que saber a quién se le da clic
+    //cuando los usuarios están pintados, es cuando hay que saber a quién se le da clic, por eso hago un querySelectorAll
     //con querySelectorAll traigo todos los usuarios en un listado, por eso hago un bucle for
     const allUsers = document.querySelectorAll(".js_user");
         for(let oneUser of allUsers) {
@@ -36,7 +36,7 @@ const renderList = (ev) => {
 //función manejadora para añadir la propiedad isFriend al objeto
 const handleClickUser = (ev) => {
     console.log("doy clic al usuario");
-    console.log("id user clicado:", ev.currentTarget.id);
+    console.log("id user clicado:", ev.currentTarget.id);//si no pongo el .id me devuelve toda la indo del <li> (img, h2, p, p)
 
     let idClicked = ev.currentTarget.id;//este es el user y, por tanto, el id clicado
 
@@ -51,12 +51,12 @@ const handleClickUser = (ev) => {
     }
 } 
 
-//función para guardar usuarios
+//función manejadora para guardar usuarios
 const handleClickSave = () => {
      localStorage.setItem("users", JSON.stringify(users));
 }
 
-//función para recuperar usuarios
+//función manejadora para recuperar usuarios
 const handleClickRecover = () => {
     if(localStorage.getItem("users") !=null) {
         users = JSON.parse(localStorage.getItem("users"));
@@ -81,7 +81,8 @@ fetch("https://randomuser.me/api/?results=10")
         console.log("users limpios:", users);
         renderList();   
         })
-    
+ 
+//eventos para escuchar el clic sobre los botones de guardar y recuperar
 saveBtn.addEventListener("click", handleClickSave);
 recoverBtn.addEventListener("click", handleClickRecover);
   
