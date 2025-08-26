@@ -16,7 +16,7 @@ Puedes probar la aplicación directamente en GitHub Pages:
 - 🔄 **Usuarios aleatorios**: se obtienen 10 nuevos usuarios desde [randomuser.me](https://randomuser.me/api/?results=10) cada vez que se inicia la aplicación o se recarga la página. Se ha modificado el objeto para mostrar solo la información relevante: nombre, país, foto y nombre de usuario.
 - ❤️ **Marcar como amigo**: al hacer clic en un usuario, se añade la propiedad `isFriend: true` en su objeto. El fondo del perfil cambia de color para indicar que ha sido marcado como amigo.
 - 💾 **Guardar usuarios**: con el botón *Save users* puedes guardar el listado actual en `localStorage` para no perderlos al recargar la página.
-- ♻️ **Recuperar usuarios**: si recargas la página por error, puedes restaurar el listado anterior con el botón *Recover users*, que lee los datos del `localStorage` y los vuelve a pintar en pantalla..recupera tus amigos guardados desde `localStorage` y vuelve a mostrarlos en la lista.
+- ♻️ **Recuperar usuarios**: si recargas la página por error, puedes restaurar el listado anterior con el botón *Recover users*, que lee los datos del `localStorage` y los vuelve a pintar en pantalla.
 
 ---
 
