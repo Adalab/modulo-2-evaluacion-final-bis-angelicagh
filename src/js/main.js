@@ -51,6 +51,7 @@ const handleClickUser = (ev) => {
     if (userClicked) {
         userClicked.isFriend = !userClicked.isFriend;//añade la propiedad isFriend y alterna el valor entre true y false
         renderList(); 
+        //handleClickCount();// en vez de tener el botón de contar, puedo hacer que cada vez que se hace clic en un usuario se llame a la función de contar
     }
 
     //también se puede hacer con findIndex: si no está en la lista te devuelve -1
@@ -74,6 +75,7 @@ const handleClickRecover = () => {
     if(localStorage.getItem("users") !=null) {
         users = JSON.parse(localStorage.getItem("users"));//convierte los datos en texto plano en objetos de un array
         renderList();
+        handleClickCount();
     }    
 } 
 

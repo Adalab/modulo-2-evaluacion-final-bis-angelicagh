@@ -17,6 +17,9 @@ Puedes probar la aplicación directamente en GitHub Pages:
 - ❤️ **Marcar como amigo**: al hacer clic en un usuario, se añade la propiedad `isFriend: true` en su objeto. El fondo del perfil cambia de color para indicar que ha sido marcado como amigo.
 - 💾 **Guardar usuarios**: con el botón *Save users* puedes guardar el listado actual en `localStorage` para no perderlos al recargar la página.
 - ♻️ **Recuperar usuarios**: si recargas la página por error, puedes restaurar el listado anterior con el botón *Recover users*, que lee los datos del `localStorage` y los vuelve a pintar en pantalla.
+- 📊 **Contador de amigos**: con el botón *Count friends* puedes ver cuántos usuarios has marcado como amigos. El mensaje se actualiza dinámicamente:
+  - Si no tienes amigos, se muestra un icono triste 😢.
+  - Si tienes uno o más, aparece un icono feliz 😊 junto al número.
 
 ---
 
