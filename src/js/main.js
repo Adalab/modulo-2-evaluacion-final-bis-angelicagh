@@ -2,9 +2,12 @@
 
 console.log('>> Ready :)');
 
+//selecciono los elementos del HTML que voy a usar
 const userList = document.querySelector(".js_userList");
 const saveBtn = document.querySelector(".js_savebtn");
 const recoverBtn = document.querySelector(".js_recoverbtn");
+const friendsBtn = document.querySelector(".js_friendsbtn");
+const friendsNumber= document.querySelector(".js_friendsNumber");
 
 let users = [];//mi array comienza vacío y se rellena con los datos de la API
 
@@ -38,9 +41,9 @@ const handleClickUser = (ev) => {
     console.log("doy clic al usuario");
     console.log("id user clicado:", ev.currentTarget.id);//si no pongo el .id me devuelve toda la indo del <li> (img, h2, p, p)
 
-    let idClicked = ev.currentTarget.id;//este es el user y, por tanto, el id clicado
+    const idClicked = ev.currentTarget.id;//este es el user y, por tanto, el id clicado
 
-    //find: busca en mi array users el id del usuario que coincide con el id clicado
+   //find: busca en mi array users el id del usuario que coincide con el id clicado
     const userClicked = users.find(userItem => userItem.id === idClicked);
     console.log("user clicked info:" , userClicked);
 
@@ -49,20 +52,44 @@ const handleClickUser = (ev) => {
         userClicked.isFriend = !userClicked.isFriend;//añade la propiedad isFriend y alterna el valor entre true y false
         renderList(); 
     }
+
+    //también se puede hacer con findIndex: si no está en la lista te devuelve -1
+ /*    const indexClicked = users.findIndex(userItem => userItem.id === idClicked)
+    console.log("user index:" , indexClicked);
+    console.log("info user clicked:", users)
+
+    if (indexClicked !== -1) {
+        users[indexClicked].isFriend = !users[indexClicked].isFriend;
+        renderList();
+    } */
 } 
 
 //función manejadora para guardar usuarios
 const handleClickSave = () => {
-     localStorage.setItem("users", JSON.stringify(users));
+     localStorage.setItem("users", JSON.stringify(users));//JSON.stringify convierte los datos del array en JSON (texto plano)
 }
 
 //función manejadora para recuperar usuarios
 const handleClickRecover = () => {
     if(localStorage.getItem("users") !=null) {
-        users = JSON.parse(localStorage.getItem("users"));
+        users = JSON.parse(localStorage.getItem("users"));//convierte los datos en texto plano en objetos de un array
         renderList();
     }    
 } 
+
+//función para contar amigos
+const handleClickCount = () => {
+    const countFriends = users.filter(user => user.isFriend); //filtra los que son amigos
+    const totalFriends = countFriends.length;
+    if (totalFriends === 0) {
+        friendsNumber.innerHTML = `<p>I have ${totalFriends} friends</p> <img class="triste" src="/images/triste.png" alt="icono triste">`
+    } else if (totalFriends === 1){
+        friendsNumber.innerHTML = `<p>I have ${totalFriends} friend</p> <img class="feliz" src="/images/feliz.png" alt="icono feliz">`
+    } else {
+        friendsNumber.innerHTML = `<p>I have ${totalFriends} friends</p> <img class="feliz" src="/images/feliz.png" alt="icono feliz">`
+    }
+    console.log("Contando amigos:", totalFriends)
+}
 
 //llamada a la API
 fetch("https://randomuser.me/api/?results=10")
@@ -80,11 +107,33 @@ fetch("https://randomuser.me/api/?results=10")
         });
         console.log("users limpios:", users);
         renderList();   
-        })
+        }) 
+
+//también se puede utilizar un bucle for
+/*  fetch("https://randomuser.me/api/?results=10")
+    .then(response => response.json())
+    .then(data => {
+        
+        // recorremos cada usuario con for...of // también podría hacerse con forEach -> data.results.forEach(user => {
+        for (const user of data.results) {
+            const cleanedUser = {
+                name: `${user.name.first} ${user.name.last}`,
+                country: user.location.country,
+                picture: user.picture.large,
+                username: user.login.username,
+                id: user.login.uuid,
+            };
+            users.push(cleanedUser);
+        }
+        console.log("users limpios:", users);
+        renderList();
+    });  */
  
 //eventos para escuchar el clic sobre los botones de guardar y recuperar
 saveBtn.addEventListener("click", handleClickSave);
 recoverBtn.addEventListener("click", handleClickRecover);
+//evento para escuchar el clic sobre el botón de contar amigos
+friendsBtn.addEventListener("click", handleClickCount)
   
 
 
