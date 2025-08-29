@@ -84,11 +84,11 @@ const handleClickCount = () => {
     const countFriends = users.filter(user => user.isFriend); //filtra los que son amigos
     const totalFriends = countFriends.length;
     if (totalFriends === 0) {
-        friendsNumber.innerHTML = `<p>I have ${totalFriends} friends</p> <img class="triste" src="/images/triste.png" alt="icono triste">`
+        friendsNumber.innerHTML = `<p>I have ${totalFriends} friends</p> <img class="triste" src="images/triste.png" alt="icono triste">`
     } else if (totalFriends === 1){
-        friendsNumber.innerHTML = `<p>I have ${totalFriends} friend</p> <img class="feliz" src="/images/feliz.png" alt="icono feliz">`
+        friendsNumber.innerHTML = `<p>I have ${totalFriends} friend</p> <img class="feliz" src="images/feliz.png" alt="icono feliz">`
     } else {
-        friendsNumber.innerHTML = `<p>I have ${totalFriends} friends</p> <img class="feliz" src="/images/feliz.png" alt="icono feliz">`
+        friendsNumber.innerHTML = `<p>I have ${totalFriends} friends</p> <img class="feliz" src="images/feliz.png" alt="icono feliz">`
     }
     console.log("Contando amigos:", totalFriends)
 }
